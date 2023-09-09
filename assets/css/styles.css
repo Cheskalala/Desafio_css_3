@@ -28,16 +28,16 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background: #6c2714;
+    grid-area: nav;
+    color: #ffffff;
 }
 nav {
     background: #6c2714 ;
-    grid-area: nav;
     padding-top: 5px;
 }
 ul {
     list-style: none;
     margin: 20px;
-
 }
 
 a {
@@ -70,7 +70,7 @@ a {
   }
   #boton-hamburguesa {
     position: relative;
-    left: 10%;
+    left: 15%;
     background-color: #6c2714;
     color: #fff;
     font-size: 24px;
@@ -81,10 +81,34 @@ a {
     justify-content: end;
 }
 .filtro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     background: #7b4f4f;
     grid-area: sidebar;
+    justify-content: center;
+    align-items: center;
 }
-.dropdown {
+.filtro div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+
+}
+.filtro div select{
+    cursor: pointer;
+    background: #6c2714;
+    border: solid 2px #401c1c;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 200px;
+    padding: 5px;
+
+}
+
+/* .dropdown {
     max-width: 90vw;
     margin: 2% 3% ;
     position: relative;
@@ -132,7 +156,6 @@ a {
     display: block;
     padding: 0.7em 0.5em;
     color: #fff;
-    margin: 0.1em 0;
     text-decoration: none;
 }
 
@@ -150,7 +173,7 @@ input[type="checkbox"]:checked + label > .flecha {
 input[type="checkbox"]:checked ~ .dropdown_content {
     visibility: visible;
     transform: translateY(0);
-}
+} */
 
 main {
     background: #e8a6a6;
@@ -161,21 +184,30 @@ main {
 .productos{
     display: grid;
     height: 80%;
-    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns:minmax(300px, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 5px;
     justify-content: center;
-    margin: 5% 20%;
+    margin: 5% 3%;
+
 }
+
 .tarjeta{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background: #7b4f4f;
-}
-.img_tarjeta{
+    width: 80vw;
+    margin: 5%;
+    padding: 10px;
+    border-radius: 5px;
     
 }
+.tarjeta:not(:first-child){
+    display: none;
+}
+
 .img_tarjeta img{
     width: 80%;
     height: 300px;
@@ -189,63 +221,40 @@ color: #ffffff;
 
 }
 .tarjeta button{
-background:#6c2714;
-border-style: none;
-border-radius: 4px;
-padding: 2px 4px;
+    background:#6c2714;
+    border-style: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+    width: 30%;
+    height: 10%;
+    cursor: pointer;
+    margin-top: 15px;
+    color: #ffffff;
 }
-#t1{
-    /* display: none; */
-}
-#t2{
-    display: none;
-}
-#t3{
-    display: none;
-}
-#t4{
-    display: none;
-}
-#t5{
-    display: none;
-}
-#t6{
-    display: none;
-}
-#t7{
-    display: none;
-}
-#t8{
-    display: none;
-}
-#t9{
-    display: none;
-}
-#t10{
-    display: none;
-}
-#t11{
-    display: none;
-}
-#t12{
-    display: none;
-}
+
 .paginas{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    width: 50vw;
     justify-content: center;
+    margin: 40px 20px;
     
+}
+.paginas button{
+    background: none;
+    border: solid 1px #ffffff;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 footer {
     background: #401c1c;
     grid-area: footer;
-    padding-top: 5px;
+    padding-top: 30px;
 }
 
 
-@media only screen and (min-width: 570px) {
+@media  screen and (min-width: 567px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
@@ -253,7 +262,100 @@ footer {
             "nav sidebar sidebar sidebar"
             "nav main main main"
             "nav main main main"
-            "footer footer footer footer";
+            "footer main main main";
+    } 
+    .respmenu{
+        justify-content: start;
+        gap: 60px;
     }
 
+    .titulo img{
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    .titulo h2{
+        position: absolute;
+        left: 150px;
+        top: 30px;
+    }
+    .hamburguesa_web{
+        display: none;
+    }
+
+    .lista_web {
+        display: flex;
+        background-color: #6c2714;
+        width: 100%;
+        color: #ffffff;
+    }
+    #menu-hamburguesa {
+        display: flex;
+        background-color: #6c2714;
+        width: 100%;
+        padding: 0;
+
+    }
+    #menu-hamburguesa ul {
+        display: flex;
+        flex-direction: column;
+        text-align: start;       
+        }
+
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Mostrar 4 columnas en la versión web */
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+        margin: 2% 3%;
+        overflow-y: auto;
+    }
+    
+    .tarjeta {
+
+        display: flex;
+        width: 200px;
+        height: 230px;
+        margin: 10px 0px;
+        padding: 10px;
+        background: #7b4f4f;
+        border-radius: 5px;
+    }
+    .tarjeta:not(:first-child){
+        display: block;
+    }
+    .tarjeta button{
+        background:#6c2714;
+        color: #fff;
+        border-style: none;
+        border-radius: 4px;
+        margin-top: 5px;
+        width: 100px;
+        height: 25px;
+        cursor: pointer;
+        }
+    .img_tarjeta img{
+        width: 50%;
+        width: 150px;
+        height: 100%;
+        object-fit: fill;
+        object-position: top;
+        padding: 0;
+        border: solid 3px #6c2714;
+        border-radius: 5px;
+    }
+    .nombre{
+        color: #ffffff;
+        margin: 10px;
+        }
+    .paginas{
+        justify-content: center;
+        margin: 40px 25%;
+        width: 50%;
+        
+    }
 }

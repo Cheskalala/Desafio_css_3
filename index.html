@@ -13,11 +13,11 @@
             <div class="titulo">
                 <img src="assets/img/manta.png" alt="">
                 <h2>Brilli Sueños</h2>
-                <button id="boton-hamburguesa">
+                <button class="hamburguesa_web" id="boton-hamburguesa">
                     <span>&#9776;</span>
                 </button>
             </div>
-            <nav id="menu-hamburguesa">
+            <nav class="lista_web" id="menu-hamburguesa">
                 <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Catalogo</a></li>
@@ -27,7 +27,17 @@
             </nav>
         </div>
         <div class="filtro">
-            <div class="dropdown">
+            <div>
+
+                <p>Ordenar por:</p>
+                <select>
+                    <option value="precio">Precio</option>
+                    <option value="fecha">Tamaño</option>
+                    <option value="fecha">Marca</option>
+                    <option value="fecha">Hilos</option>
+                </select>
+            </div>
+            <!-- <div class="dropdown">
                 <input type="checkbox" id="dropdown" />
                 <label for="dropdown" class="dropdown_btn">
                     <span>Filtros</span>
@@ -39,12 +49,12 @@
                     <li><a href="#">Marca</a></li>
                     <li><a href="#">Hilos</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <main>
             <div class="productos">
                 <!-- producto 1 -->
-                <div class="tarjeta" id="t1">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets\img\sabana3.png" alt="">
                     </div>
@@ -54,9 +64,9 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 2 -->
-                <div class="tarjeta" id="t2">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
-                        <img src="assets\img\sabana4.jpg" alt="">
+                        <img src="assets\img\sabana4.png" alt="">
                     </div>
                     <div class="nombre">
                         <h4>Juego de Sabanas</h4>
@@ -64,7 +74,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 3 -->
-                <div class="tarjeta" id="t3">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana1.png" alt="">
                     </div>
@@ -74,7 +84,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 4 -->
-                <div class="tarjeta" id="t4">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana2.jpg" alt="">
                     </div>
@@ -84,7 +94,7 @@
                     <button>Ver más</button>
                 </div>
                     <!-- producto 1 -->
-                <div class="tarjeta" id="t5">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets\img\sabana3.png" alt="">
                     </div>
@@ -94,9 +104,9 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 2 -->
-                <div class="tarjeta" id="t6">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
-                        <img src="assets\img\sabana4.jpg" alt="">
+                        <img src="assets\img\sabana4.png" alt="">
                     </div>
                     <div class="nombre">
                         <h4>Juego de Sabanas</h4>
@@ -104,7 +114,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 3 -->
-                <div class="tarjeta" id="t7">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana1.png" alt="">
                     </div>
@@ -114,7 +124,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 4 -->
-                <div class="tarjeta" id="t8">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana2.jpg" alt="">
                     </div>
@@ -124,7 +134,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 1 -->
-                <div class="tarjeta" id="t9">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets\img\sabana3.png" alt="">
                     </div>
@@ -134,9 +144,9 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 2 -->
-                <div class="tarjeta" id="t10">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
-                        <img src="assets\img\sabana4.jpg" alt="">
+                        <img src="assets\img\sabana4.png" alt="">
                     </div>
                     <div class="nombre">
                         <h4>Juego de Sabanas</h4>
@@ -144,7 +154,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 3 -->
-                <div class="tarjeta" id="t11">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana1.png" alt="">
                     </div>
@@ -154,7 +164,7 @@
                     <button>Ver más</button>
                 </div>
                 <!-- producto 4 -->
-                <div class="tarjeta" id="t12">
+                <div class="tarjeta" >
                     <div class="img_tarjeta">
                         <img src="assets/img/sabana2.jpg" alt="">
                     </div>
@@ -163,22 +173,21 @@
                     </div>
                     <button>Ver más</button>
                 </div>
-
-
-
             </div>
+            <!-- botonera -->
             <div class="paginas">
-                <i class="fa-solid fa-angles-left" style="color: #ffffff;"></i>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
+                <button class="anterior"> <i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="siguiente"><i class="fa-solid fa-angles-right" style="color: #ffffff;"></i></button> 
             </div>
         </main>
-        <footer>Footer</footer>
+        <footer>
+            <p>Todos los derechos reservados</p> 
+        </footer>
     </div>
-    <script src="https://kit.fontawesome.com/f946763ad1.js" crossorigin="anonymous"></script>
-    <script>
+    <script >
         document.getElementById("boton-hamburguesa").addEventListener("click", function () {
             var menu = document.getElementById("menu-hamburguesa");
             if (menu.style.display === "none") {
@@ -188,5 +197,7 @@
             }
         });
     </script>
+    <script src="https://kit.fontawesome.com/f946763ad1.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
